@@ -45,4 +45,5 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.7'
   gem 'capybara'
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end

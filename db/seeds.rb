@@ -7,6 +7,25 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # ID3 tag music genres are surprisingly specific.
+Artist.destroy_all
+Song.destroy_all
+Note.destroy_all
+Genre.destroy_all
+
+10.times do 
+      Artist.create(name: Faker::Artist.name)
+  end
+
+10.times do 
+    Song.create(title: Faker::Music.album,
+    artist: Artist.all.sample,
+    genre: Genre.all.sample)
+end
+
+10.times do 
+  Note.create(content: Faker::Music.chord,
+  song: Song.all.sample)
+end
 
 genres = Hash[[
   "Blues",
